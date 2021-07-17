@@ -56,10 +56,17 @@ if(isset($_GET['send'])){
         </div>
         <div id="madrak">
             <p class="omidbeheshtianp">مدرک زبان انگلیسی:</p>
-            <input type="radio" id="z1" name="madrak" value="y">
+            <input type="radio" id="z1" name="madrak" value="y" onclick="madraknomre()">
             <label for="z1">دارم</label>
-            <input type="radio" id="z2" name="madrak" value="n">
+            <div id="madraknomre" style="display:none;">
+                <input type="text" placeholder="نمره مدرک" name="nomre">
+            </div>
+            <input type="radio" id="z2" name="madrak" value="n" onclick="madrakbegir()">
             <label for="z2">ندارم</label>
+            <div id="madrakbegir" style="display:none;">
+                    <input type="checkbox" name="madrakbegirim" id="madrakbegirim">
+                    <label for="madrakbegirim">میتوانم اخذ کنم</label>
+            </div>
         </div>
         <div id="madrakgheyr">
             <p class="omidbeheshtianp">مدرک زبان غیر از انگلیسی:</p>
@@ -117,6 +124,14 @@ function farzand() {
 }
 function farzandhide() {
     document.getElementById("2tt").style.display = "none";
+}
+function madrakbegir() {
+    document.getElementById("madrakbegir").style.display = "block";
+    document.getElementById("madraknomre").style.display = "none";
+}
+function madraknomre() {
+    document.getElementById("madraknomre").style.display = "block";
+    document.getElementById("madrakbegir").style.display = "none";
 }
 </script>
 </body>
