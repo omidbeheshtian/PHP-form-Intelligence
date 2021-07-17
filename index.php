@@ -72,6 +72,9 @@ if(isset($_GET['send'])){
             <p class="omidbeheshtianp">مدرک زبان غیر از انگلیسی:</p>
             <input type="radio" id="mg1" name="madrakgheyr" value="y">
             <label for="mg1">دارم</label>
+            <div id="madrakgheyr">
+                input
+            </div>
             <input type="radio" id="mg2" name="madrakgheyr" value="n">
             <label for="mg2">ندارم</label>
         </div>
