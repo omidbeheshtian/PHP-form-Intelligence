@@ -6,12 +6,12 @@ if(isset($_GET['send'])){
     if ($_GET['mali']=="1mm"){
         echo "zan nimikhay";
     }
-    if ($_GET['mali']=="2mm"){
+    if ($_GET['mali']=="2mm" && $_GET['zaban']=="y"){
         echo "jooooooooooon";
     }
 }
 ?>
-<html lang="en" dir="ltr">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,12 +20,76 @@ if(isset($_GET['send'])){
 </head>
 <body>
         <form action="" method="GET">
-            <div id="mali">
-                <input type="radio" id="r1" name="mali" value="500m">500 mil
-                <input type="radio" id="r2" name="mali" value="1mm">1 miliard
-                <input type="radio" id="r3" name="mali" value="2mm" checked="checked">2 miliard
+            <div id="maghsad">
+                <input type="radio" id="m1" name="maghsad" value="euro">
+                <label for="m1">اروپا</label>
+                <input type="radio" id="m2" name="maghsad" value="canada">
+                <label for="m2">کانادا</label>
             </div>
-            <input type="submit" value="send" name="send">
+            <div id="age">
+            <select name="age">
+                    <option value="18-23">18 تا 23 سال</option>
+                    <option value="23-35">23 تا 35 سال</option>
+                    <option value="35-50">35 تا 50 سال</option>
+                    <option value="50+">بالای 50 سال</option>
+                </select>
+            </div>
+            <div id="job">
+                <select name="job">
+                    <option value="karmand">کارمند</option>
+                    <option value="sahebkar">صاحب کسب و کار</option>
+                    <option value="azad">شغل آزاد</option>
+                    <option value="adameshteghal">عدم اشتغال</option>
+                </select>
+            </div>
+            <div id="tamakonmali">
+                <select name="tamakonmali">
+                    <option value="200-500">200 میلیون تا 500 میلیون</option>
+                    <option value="500-1">500 میلیون تا 1 میلیارد</option>
+                    <option value="1-2">1 میلیارد تا 2 میلیارد</option>
+                    <option value="2+">2 میلیارد به بالا</option>
+                </select>
+            </div>
+            <div id="madrak">
+                <input type="radio" id="z1" name="madrak" value="y">
+                <label for="z1">دارم</label>
+                <input type="radio" id="z2" name="madrak" value="n">
+                <label for="z2">ندارم</label>
+            </div>
+            <div id="madrakgheyr">
+                <input type="radio" id="mg1" name="madrakgheyr" value="y">
+                <label for="mg1">دارم</label>
+                <input type="radio" id="mg2" name="madrakgheyr" value="n">
+                <label for="mg2">ندارم</label>
+            </div>
+            <div id="madraktahsili">
+                <select name="madraktahsili">
+                    <option value="n">ندارم</option>
+                    <option value="diplom">دیپلم</option>
+                    <option value="karshenasi">کارشناسی</option>
+                    <option value="karshenasiarshad">کارشناسی ارشد</option>
+                    <option value="doctor">دکتری</option>
+                </select>
+            </div>
+            <div id="sabeghesafar">
+                <input type="radio" id="sf1" name="sabeghesafar" value="y">
+                <label for="sf1">دارم</label>
+                <input type="radio" id="sf2" name="sabeghesafar" value="n">
+                <label for="sf2">ندارم</label>
+            </div>
+            <div id="taahol">
+                <input type="radio" id="t1" name="taahol" value="motahel">
+                <label for="t1">متاهل</label>
+                <input type="radio" id="t2" name="taahol" value="mojarad">
+                <label for="t2">مجرد</label>
+            </div>
+            <div id="akhzvisa">
+                <input type="radio" id="av1" name="akhzvisa" value="y">
+                <label for="av1">دارم</label>
+                <input type="radio" id="av2" name="akhzvisa" value="n">
+                <label for="av2">ندارم</label>
+            </div>
+            <input type="submit" value="ارسال" name="send">
         </form>
 </body>
 </html>
