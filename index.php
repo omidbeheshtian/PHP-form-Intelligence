@@ -70,12 +70,19 @@ if(isset($_GET['send'])){
         </div>
         <div id="madrakgheyr">
             <p class="omidbeheshtianp">مدرک زبان غیر از انگلیسی:</p>
-            <input type="radio" id="mg1" name="madrakgheyr" value="y">
+            <input type="radio" id="mg1" name="madrakgheyr" value="y" onclick="madrakgheyrhide()">
             <label for="mg1">دارم</label>
-            <div id="madrakgheyr">
-                input
+            <div id="madrakgheyrhide" style="display:none;">
+                <p class="omidbeheshtianp">زبان مدرک:</p>
+                <select class="input100" name="madrakgheyrenglish">
+                    <option value="france">فرانسه</option>
+                    <option value="germany">آلمانی</option>
+                    <option value="spain">اسپانیایی</option>
+                    <option value="swed">سوئدی</option>
+                    <option value="gheyre">غیره</option>
+                </select>
             </div>
-            <input type="radio" id="mg2" name="madrakgheyr" value="n">
+            <input type="radio" id="mg2" name="madrakgheyr" value="n" onclick="madgheyrhide2()">
             <label for="mg2">ندارم</label>
         </div>
         <div id="madraktahsili">
@@ -103,18 +110,35 @@ if(isset($_GET['send'])){
             <label for="t2">مجرد</label>
             <div id="2tt" style="display:none;">
             <p class="omidbeheshtianp">فرزند:</p>
-            <input type="radio" id="yc" name="child" value="yes">
+            <input type="radio" id="yc" name="child" value="yes" onclick="tedadfarzzand()">
                 <label for="yc">دارم</label>
-                <input type="radio" id="nc" name="child" value="yes">
+                <div id="tedadfarzand" style="display:none;">
+                    <input type="text" name="tedadfarzand" placeholder="تعداد فرزندان و سن آنها">
+                </div>
+                <input type="radio" id="nc" name="child" value="yes" onclick="tedadfarzandhide()">
                 <label for="nc">ندارم</label>
             </div>
         </div>
         <div id="akhzvisa">
             <p class="omidbeheshtianp">سابقه اقدام جهت اخذ هر نوع ویزا یا اقامت:</p>
-            <input type="radio" id="av1" name="akhzvisa" value="y">
+            <input type="radio" id="av1" name="akhzvisa" value="y" onclick="rejectvisa()">
             <label for="av1">دارم</label>
-            <input type="radio" id="av2" name="akhzvisa" value="n">
+            <input type="radio" id="av2" name="akhzvisa" value="n" onclick="rejecthide()">
             <label for="av2">ندارم</label>
+            <div id="rejectvisa" style="display:none;">
+                    <p class="omidbeheshtianp">سابقه ریجکت ویزا :</p>
+                    <input type="radio" id="re1" name="reject" value="y" onclick="noevisa()">
+                    <label for="re1">دارم</label>
+                    <input type="radio" id="re2" name="reject" value="n" onclick="noevisahide()">
+                    <label for="re2">ندارم</label>
+                    <div id="noevisareject" style="display:none">
+                        <p class="omidbeheshtianp">نوع ویزا:</p>
+                        <input type="radio" id="tr1" name="typevisareject" value="shengen">
+                        <label for="tr1">شنگن</label>
+                        <input type="radio" id="tr2" name="typevisareject" value="notshengen">
+                        <label for="tr2">غیر شنگن</label>
+                    </div>
+                </div>
         </div>
     </div>
     <div>
@@ -135,6 +159,30 @@ function madrakbegir() {
 function madraknomre() {
     document.getElementById("madraknomre").style.display = "block";
     document.getElementById("madrakbegir").style.display = "none";
+}
+function madrakgheyrhide() {
+    document.getElementById("madrakgheyrhide").style.display = "block";
+}
+function madgheyrhide2() {
+    document.getElementById("madrakgheyrhide").style.display = "none";
+}
+function tedadfarzzand() {
+    document.getElementById("tedadfarzand").style.display = "block";
+}
+function tedadfarzandhide() {
+    document.getElementById("tedadfarzand").style.display = "none";
+}
+function rejectvisa() {
+    document.getElementById("rejectvisa").style.display = "block";
+}
+function rejecthide() {
+    document.getElementById("rejectvisa").style.display = "none";
+}
+function noevisa() {
+    document.getElementById("noevisareject").style.display = "block";
+}
+function noevisahide() {
+    document.getElementById("noevisareject").style.display = "none";
 }
 </script>
 </body>
