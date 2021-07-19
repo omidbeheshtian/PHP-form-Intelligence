@@ -211,22 +211,24 @@ if(isset($_GET['send'])){
     }
     if($_GET['maghsad'] == 'euro' && $_GET['age'] != '50+' && $_GET['madraktahsili'] != 'n'){
         echo '
-        <div class="row m-t-25">
-        <div class="col-sm-6 col-lg-12">
-            <div class="overview-item overview-item--c5" style="background-color:#FFFFFF; padding:15px 15px 0;">
-                <div class="overview__inner">
-                    <div class="overview-box clearfix">
-                            <i style="font-size:30px; float:right; color:#4272D7;" class="fas fa-check"></i>
-                            <h2 style="font-size:20px; text-align:right; clear:both; padding-top:10px;">تحصیلی اتحادیه اروپا</h2>
-                    </div>
+                <div class="main-content">
+        <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <div class="row m-t-25">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="overview-item overview-item--c5" style="background-color:#FFFFFF; padding:15px 15px 0;">
+                        <div class="overview__inner">
+                             <div class="overview-box clearfix">
+                                <i style="font-size:30px; float:right; color:#2E7D32;" class="fas fa-check"></i>
+                                <h2 style="font-size:20px; text-align:right; clear:both; padding-top:10px;">تحصیلی اتحادیه اروپا</h2>
                     <div class="overview-chart">
                     </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        </div>
-        <div class="row m-t-25">
-        <div class="col-sm-6 col-lg-6">
+
+        <div class="col-sm-6 col-lg-4">
             <div class="overview-item overview-item--c5" style="background-color:#FFFFFF; padding:15px 15px 0;">
                 <a href="tel:02188361003" class="omidbeheshtian">
                 <div class="overview__inner">
@@ -241,7 +243,7 @@ if(isset($_GET['send'])){
             </div>
         </div>
 
-        <div class="col-sm-6 col-lg-6">
+        <div class="col-sm-6 col-lg-4">
             <div class="overview-item overview-item--c5" style="background-color:#FFFFFF; padding:15px 15px 0;">
                 <a href="https://portal.visaatlantis.com/dashboard/cunsulations/" class="omidbeheshtian">
                 <div class="overview__inner">
@@ -254,6 +256,8 @@ if(isset($_GET['send'])){
                 </div>
                 </a>
             </div>
+        </div>
+        </div>
         </div>
         </div>';
     }
